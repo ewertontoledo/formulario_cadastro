@@ -1,38 +1,18 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const mysql = require('mysql2');
 
+const express = require('express'); // Importa a biblioteca express para criar o servidor
+const bodyParser = require('body-parser'); // Importa o body-parser para fazer o parse do corpo das requisições
+const mysql = require('mysql2'); // Importa a biblioteca mysql2 para interagir com o banco de dados MySQL
+ 
+// Cria uma instância do express
 const app = express();
-const port = 5000;
+// Define a porta em que o servidor vai rodar
+const port = ; // Defina a porta corretamente
 
+// Middleware para parsear o corpo das requisições como JSON
 app.use(bodyParser.json());
 
-const db = mysql.createConnection({
-  host: 'db',
-  user: 'root',
-  password: 'root',
-  database: 'cadastro_db'
-});
+// Criar conexão com o banco de dados MySQL
 
-db.connect(err => {
-  if (err) {
-    console.error('error connecting: ' + err.stack);
-    return;
-  }
-  console.log('connected to database');
-});
 
-app.post('/cadastro', (req, res) => {
-  const { nome, idade, cpf, profissao } = req.body;
-  const query = 'INSERT INTO cadastro (nome, idade, cpf, profissao) VALUES (?, ?, ?, ?)';
-  db.execute(query, [nome, idade, cpf, profissao], (err, results) => {
-    if (err) {
-      return res.status(500).send(err);
-    }
-    res.status(200).send('Cadastro realizado com sucesso');
-  });
-});
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+//  Criar rota para cadastrar dados

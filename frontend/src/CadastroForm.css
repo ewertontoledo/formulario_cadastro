@@ -1,0 +1,59 @@
+.App {
+  text-align: center;
+}
+
+/* Ajuste da Margem Superior do Formulário */
+.form-central {
+  margin-top: 50px; 
+}
+
+/* Cabeçalho */
+.App-header {
+  background-color: #282c34;
+  min-height: 10vh; /* Altura do header */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 10px; 
+}
+
+/* Formulário de Cadastro */
+form {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 15px;
+  background: #f4f4f4; 
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Botão */
+button {
+  background-color: #282c34;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #333;
+}

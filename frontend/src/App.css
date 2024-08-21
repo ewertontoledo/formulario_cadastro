@@ -1,0 +1,40 @@
+header {
+  text-align: center;
+}
+
+header h1 {
+  color: #ffffff; /* Branco para o texto do título */
+}
+
+
+nav {
+  background-color: #343a40; /* Cinza escuro */
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff; /* Branco para o texto dos links */
+  font-weight: bold;
+  padding: 0.5rem 1rem; /* Adiciona algum espaço ao redor dos links */
+  border-radius: 4px;
+  background-color: #000000; /* Preto para o fundo dos botões */
+}
+
+nav a:hover {
+  background-color: #555; /* Cinza mais claro para o fundo do botão ao passar o mouse */
+  color: #ffffff; /* Mantém o texto branco ao passar o mouse */
+}
+

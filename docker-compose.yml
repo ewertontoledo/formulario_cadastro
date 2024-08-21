@@ -1,0 +1,33 @@
+# version: '3.8'  # Versão do Docker Compose
+
+# services:
+#   frontend:
+#     build: ./frontend  # Diretório de build do frontend
+#     ports:
+#       - '3000:3000' 
+#     volumes:
+#       - ./frontend:/app  # Diretório frontend no host para /app no contêiner
+
+#   backend:
+#     build: ./backend  # Diretório de build do backend
+#     ports:
+#       - '3001:3001'  
+#     depends_on:
+#       - db  # Dependência do serviço db
+#     environment:
+#       DB_HOST: db
+#       DB_USER: root
+#       DB_PASSWORD: 123456
+#       DB_DATABASE: cadastro_db
+#     volumes:
+#       - ./backend:/app  # Diretório backend no host para /app no contêiner
+
+#   db:
+#     image: my-custom-mysql  # Use a imagem personalizada
+#     ports:
+#       - '3306:3306'  
+#     volumes:
+#       - db_data:/var/lib/mysql  # Monta o volume db_data para persistência dos dados do MySQL
+
+# volumes:
+#   db_data:  # Define o volume para persistência de dados do MySQL

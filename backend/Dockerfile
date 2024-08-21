@@ -1,8 +1,14 @@
-# Use a imagem oficial do Node.js como base
 FROM node:18
 
-# Defina o diretório de trabalho
 WORKDIR /app
 
+COPY package*.json ./
 
-COPY 
+RUN npm install --legacy-peer-deps
+
+COPY . .
+
+EXPOSE 3001 
+
+CMD ["node", "index.js"]
+

@@ -79,19 +79,6 @@ const verificarCPFExistente = (cpf, callback) => {
   });
 };
 
-// Rota GET para obter todos os usuários
-app.get('/api/usuarios', (req, res) => {
-  const query = 'SELECT * FROM usuarios';
-  
-  db.query(query, (err, results) => {
-    if (err) {
-      console.error('Erro ao buscar usuários:', err);
-      res.status(500).send('Erro ao buscar usuários.');
-    } else {
-      res.status(200).json(results);
-    }
-  });
-});
 
 // Rota POST para o caminho '/api/cadastro'
 app.post('/api/cadastro', (req, res) => {
@@ -122,6 +109,21 @@ app.post('/api/cadastro', (req, res) => {
     });
   });
 });
+
+// Rota GET para obter todos os usuários
+app.get('/api/usuarios', (req, res) => {
+  const query = 'SELECT * FROM usuarios';
+  
+  db.query(query, (err, results) => {
+    if (err) {
+      console.error('Erro ao buscar usuários:', err);
+      res.status(500).send('Erro ao buscar usuários.');
+    } else {
+      res.status(200).json(results);
+    }
+  });
+});
+
 
 // Rota GET para obter um usuário específico pelo ID
 app.get('/api/usuarios/:id', (req, res) => {

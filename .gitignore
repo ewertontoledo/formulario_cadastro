@@ -1,11 +1,13 @@
- Diretório node_modules
+# Ignorar node_modules em qualquer nível
 node_modules/
+**/node_modules/
 
 # Logs
 *.log
 
 # Environments
 *.env
+.env
 local.settings.json
 
 # Docker

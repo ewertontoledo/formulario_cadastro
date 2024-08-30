@@ -1,3 +1,7 @@
- Diretório node_modules
+# Diretórios e arquivos a serem ignorados
 node_modules/
-.env
+**/node_modules/
+
+
+# Ignorar arquivos de configuração de ambiente
+backend/.env

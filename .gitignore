@@ -1,1 +1,16 @@
-.env
+# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# Environments
+*.env
+local.settings.json
+
+# Docker
+docker-compose.override.yml
+
+# OS or editor-specific files
+.DS_Store
+.vscode/

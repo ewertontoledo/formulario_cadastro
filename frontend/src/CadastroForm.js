@@ -12,7 +12,7 @@ const CadastroForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
   
-    const response = await fetch('http://172.28.0.4:3001/api/cadastro', {
+    const response = await fetch('http://172.28.0.3:3001/api/cadastro', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

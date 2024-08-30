@@ -12,7 +12,7 @@ const UpdateForm = () => {
   const [profissao, setProfissao] = useState('');
 
   useEffect(() => {
-    fetch(`http:///172.28.0.4:3001/api/usuarios/${id}`)
+    fetch(`http:///172.28.0.3:3001/api/usuarios/${id}`)
       .then(response => response.json())
       .then(data => {
         setUser(data);
@@ -27,7 +27,7 @@ const UpdateForm = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
 
-    const response = await fetch(`http://172.28.0.4:3001/api/usuarios/${id}`, {
+    const response = await fetch(`http://172.28.0.3:3001/api/usuarios/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
